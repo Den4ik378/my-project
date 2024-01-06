@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Продукти</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/image/logo.PNG" alt="logo" />
+      </div>
+      <div class="nav">
+        <a href="index.html">Головна</a>
+      </div>
+    </header>
+    <main>
+      <h1>Список продуктів</h1>
+      <button onclick="openCreateProductForm()">Додати продукт</button>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Назва</th>
+            <th>Опис</th>
+            <th>Ціна</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="productsTableBody"></tbody>
+      </table>
+
+      <div id="createProductForm" style="display: none">
+        <h2>Додати продукт</h2>
+        <label for="newProductName">Назва:</label>
+        <input type="text" id="newProductName" required /><br />
+
+        <label for="newProductDescription">Опис:</label>
+        <textarea id="newProductDescription" required></textarea><br />
+
+        <label for="newProductPrice">Ціна:</label>
+        <input type="number" id="newProductPrice" required /><br />
+
+        <button onclick="createProduct()">Зберегти</button>
+        <button onclick="closeCreateProductForm()">Скасувати</button>
+      </div>
+      <div id="editProductForm" style="display: none">
+        <h2>Редагувати продукт</h2>
+        <input type="hidden" id="editProductId" />
+
+        <label for="editProductName">Назва:</label>
+        <input type="text" id="editProductName" required /><br />
+
+        <label for="editProductDescription">Опис:</label>
+        <textarea id="editProductDescription" required></textarea><br />
+
+        <label for="editProductPrice">Ціна:</label>
+        <input type="number" id="editProductPrice" required /><br />
+
+        <button onclick="saveEditedProduct()">Зберегти</button>
+        <button onclick="closeEditProductForm()">Скасувати</button>
+      </div>
+    </main>
+    <footer>
+      <div class="login_contacts">
+        <a href="tel: +380637117208" class="log_cont">
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+        </a>
+        <a href="mailto: dennatarov0129@gmail.com" class="log_cont">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tg://resolve?domain=eccoor" class="log_cont">
+          <i class="fa fa-telegram" aria-hidden="true"></i>
+        </a>
+        <a href="whatsapp://send?phone=+380637117208" class="log_cont">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

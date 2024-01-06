@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Список працівників</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/image/logo.PNG" alt="logo" />
+      </div>
+      <div class="nav">
+        <a href="index.html">Головна</a>
+      </div>
+    </header>
+    <main>
+      <h1>Список працівників</h1>
+      <button onclick="openCreateEmployeeForm()">Додати працівника</button>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Ім’я</th>
+            <th>Посада</th>
+            <th>Email</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="employeesTableBody"></tbody>
+      </table>
+
+      <div id="createEmployeeForm" style="display: none">
+        <h2>Додати працівника</h2>
+        <label for="newEmployeeName">Ім’я:</label>
+        <input type="text" id="newEmployeeName" required /><br />
+
+        <label for="newEmployeePosition">Посада:</label>
+        <input type="text" id="newEmployeePosition" required /><br />
+
+        <label for="newEmployeeEmail">Email:</label>
+        <input type="email" id="newEmployeeEmail" required /><br />
+
+        <button onclick="createEmployee()">Зберегти</button>
+        <button onclick="closeCreateEmployeeForm()">Скасувати</button>
+      </div>
+      <div id="editEmployeeForm" style="display: none">
+        <h2>Редагувати працівника</h2>
+        <input type="hidden" id="editEmployeeId" />
+
+        <label for="editEmployeeName">Ім’я:</label>
+        <input type="text" id="editEmployeeName" required /><br />
+
+        <label for="editEmployeePosition">Посада:</label>
+        <input type="text" id="editEmployeePosition" required /><br />
+
+        <label for="editEmployeeEmail">Email:</label>
+        <input type="email" id="editEmployeeEmail" required /><br />
+
+        <button onclick="saveEditedEmployee()">Зберегти</button>
+        <button onclick="closeEditEmployeeForm()">Скасувати</button>
+      </div>
+    </main>
+    <footer>
+      <div class="login_contacts">
+        <a href="tel: +380637117208" class="log_cont">
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+        </a>
+        <a href="mailto: dennatarov0129@gmail.com" class="log_cont">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tg://resolve?domain=eccoor" class="log_cont">
+          <i class="fa fa-telegram" aria-hidden="true"></i>
+        </a>
+        <a href="whatsapp://send?phone=+380637117208" class="log_cont">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="js/employees.js"></script>
+  </body>
+</html>

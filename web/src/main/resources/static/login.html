@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Авторизація</title>
+  </head>
+  <body id="body_login">
+    <header>
+      <div class="logo">
+        <img src="/image/logo.PNG" alt="logo" />
+      </div>
+      <div class="nav">
+        <a href="index.html">Головна</a>
+      </div>
+    </header>
+    <main id="log_in">
+      <form id="login">
+        <h2>Авторизація</h2>
+        <div class="contact">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email_login"
+            placeholder="Введіть Ваш Email"
+            required
+          />
+        </div>
+        <div class="contact">
+          <label>Password</label>
+          <input
+            type="password"
+            name="pass_login"
+            placeholder="Введіть Ваш пароль"
+            required
+          />
+        </div>
+        <div class="contact">
+          <button type="submit" name="button_login">Авторизуватися</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="login_contacts">
+        <a href="tel: +380637117208" class="log_cont">
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+        </a>
+        <a href="mailto: dennatarov0129@gmail.com" class="log_cont">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tg://resolve?domain=eccoor" class="log_cont">
+          <i class="fa fa-telegram" aria-hidden="true"></i>
+        </a>
+        <a href="whatsapp://send?phone=+380637117208" class="log_cont">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
